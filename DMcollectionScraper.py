@@ -9,7 +9,7 @@ from selenium.common.exceptions import NoSuchElementException, ElementClickInter
 def setup_driver():
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(options=options)
-    driver.get("https://doggy.market/nfts/doginaldogs")
+    driver.get("https://doggy.market/nfts/rise-of-skulls")
     return driver
 
 def scroll_to_bottom(driver):
@@ -93,7 +93,7 @@ def scrape_items(driver, output_file):
     return items
 
 def main():
-    output_file = 'doginaldogs.json'
+    output_file = 'rise-of-skulls.json'
     # Initialize the JSON file if it doesn't exist
     with open(output_file, 'w') as file:
         json.dump([], file)
